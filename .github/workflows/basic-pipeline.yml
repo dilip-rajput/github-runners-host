@@ -18,13 +18,13 @@ jobs:
       
       - name: Print runner info
         run: |
-        echo "Running on self-hosted runner: $RUNNER_NAME"
-        echo "OS: $RUNNER_OS"
-        echo "Arch: $RUNNER_ARCH"
+          echo "Running on self-hosted runner: $RUNNER_NAME"
+          echo "OS: $RUNNER_OS"
+          echo "Arch: $RUNNER_ARCH"
       
       - name: Run sample scripte
         run: |
-        echo "Hello from Github Action on self-hosted runner!"
-        uname -a
-        ip a
-        
+          echo "Hello from Github Action on self-hosted runner!"
+          uname -a
+          ip a
+
