@@ -14,7 +14,7 @@ jobs:
     runs-on:  [self-hosted, ubuntu] # target your ubuntu runner
     steps:
       - name: Checkout repository
-        user: actions/checkout@v4
+        uses actions/checkout@v4
       
       - name: Print runner info
         run: |
