@@ -1,0 +1,30 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branch:
+    - main
+
+jobs:
+  build:
+    name: Build and test on self hosted
+    runs-on:  [self-hosted, ubuntu] # target your ubuntu runner
+    steps:
+      - name: Checkout repository
+        user: actions/checkout@v4
+      
+      - name: Print runner info
+        run: |
+        echo "Running on self-hosted runner: $RUNNER_NAME"
+        echo "OS: $RUNNER_OS"
+        echo "Arch: $RUNNER_ARCH"
+      
+      - name: Run sample scripte
+        run: |
+        echo "Hello from Github Action on self-hosted runner!"
+        uname -a
+        ip a
+        
